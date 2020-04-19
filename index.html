@@ -23,16 +23,21 @@
 
 <body>
     <header class="card-header bg-success ">
-        <h1 class="text-light">Password Generator</h1>
+        <h1 class=" text-center text-light">Password Generator</h1>
 
     </header>
+
+
+
+
+
     <main class="container card-body text-center">
         <div>
 
             <h2 class="text-primary text-center">Generate your password</h2>
             <hr>
 
-            <button type="button" class="btn btn-success btn-lg btn-block">Copy password</button>
+            <button type="button" id="clipboard" class="btn btn-success btn-lg btn-block">Copy password</button>
             <!-- labels -->
 
 
@@ -55,7 +60,17 @@
                     <div class="card mb-4 shadow-sm">
 
                         <div class="card">
-                            <label for="uppercase"><input type="checkbox" checked />Uppercase</label>
+                            <label for="uppercase"><input type="checkbox" checked id="uppercase" />Uppercase</label>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+
+                        <div class="setting" class="card">
+                            <label for="uppercase"><input type="checkbox" checked id="lowercase" />Lowercase</label>
 
                         </div>
 
@@ -65,7 +80,7 @@
                     <div class="card mb-4 shadow-sm">
 
                         <div class="card">
-                            <label for="uppercase"><input type="checkbox" checked />Uppercase</label>
+                            <label for="uppercase"><input type="checkbox" checked id="numbers" />Numbers</label>
 
                         </div>
 
@@ -75,17 +90,7 @@
                     <div class="card mb-4 shadow-sm">
 
                         <div class="card">
-                            <label for="uppercase"><input type="checkbox" checked />Uppercase</label>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 shadow-sm">
-
-                        <div class="card">
-                            <label for="uppercase"><input type="checkbox" checked />Uppercase</label>
+                            <label for="uppercase"><input type="checkbox" checked id="symbols" />Symbols</label>
 
 
                         </div>
@@ -108,18 +113,19 @@
 
 
 
-        <h1> <textarea id="password" placeholder="Your Secure Password" aria-label="Generated Password">
+        <h1 id="result">
+            <textarea id="password" placeholder="Your Secure Password" aria-label="Generated Password">
 
-            </textarea></h1>
+                </textarea></h1>
 
-        <button type="button" class="btn btn-primary btn-lg btn-block">Generate password</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="generate">Generate password</button>
 
         </div>
 
     </main>
 
 
-
+    <script src="app.js"></script>
 </body>
 
 </html>
